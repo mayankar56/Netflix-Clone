@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Who's Watching? - Netflix Clone</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+    }
+
+    .profiles {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .profile:hover {
+      transform: scale(1.1);
+    }
+
+    .profile img {
+      width: 130px;
+      height: 130px;
+      border-radius: 10px;
+    }
+
+    .profile span {
+      margin-top: 10px;
+      color: #aaa;
+    }
+
+    .add-profile {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      color: white;
+    }
+
+    .manage-btn {
+      margin-top: 50px;
+      border: 1px solid #666;
+      color: #999;
+      background-color: transparent;
+      padding: 8px 20px;
+    }
+
+    .manage-btn:hover {
+      color: white;
+      border-color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Who's watching?</h1>
+
+  <div class="profiles">
+    <div class="profile" onclick="selectProfile('Mayank')">
+      <img src="C:\Users\mayank\Downloads\1ba2e6d1d4874546c70c91f1024e17fb.jpg" alt="Mayank"/>
+      <span>Mayank</span>
+    </div>
+    <div class="profile" onclick="selectProfile('Gurpreet')">
+      <img src="C:\Users\mayank\Downloads\1ba2e6d1d4874546c70c91f1024e17fb.jpg" alt="Gurpreet"/>
+      <span>Gurpreet</span>
+    </div>
+    <div class="profile" onclick="selectProfile('Rohit')">
+      <img src="C:\Users\mayank\Downloads\ec747a688a5d6232663caaf114bad1c3.jpg" alt="Rohit"/>
+      <span>Rohit</span>
+    </div>
+    <div class="profile" onclick="selectProfile('children')">
+      <img src="C:\Users\mayank\Downloads\4063fcdc9d096eeab24d67bfc778f989.jpg" alt="Children"/>
+      <span>Children</span>
+    </div>
+    <div class="profile" onclick="addProfile()">
+      <div class="add-profile" style="width: 130px; height: 130px; border-radius: 10px;">
+        +
+      </div>
+      <span>Add Profile</span>
+    </div>
+  </div>
+
+  <button class="manage-btn">Manage Profiles</button>
+
+  <script>
+    function selectProfile(name) {
+      // You can store selected user in localStorage/session and redirect
+      localStorage.setItem('profile', name);
+      window.location.href = "index.html"; // or home page of Netflix clone
+    }
+
+    function addProfile() {
+      alert("Add Profile functionality coming soon!");
+    }
+  </script>
+
+</body>
+</html>
